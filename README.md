@@ -1,9 +1,13 @@
 # Image2PDF
-Convert a folder of images into one PDF or PPTX, sorted your way. 100% client-side.
-Image2PDF is a single-file web app that turns a folder of pictures into one PDF or PowerPoint presentation. Choose a folder, review a checklist of every image, sort them by name, date modified, date taken (EXIF), size or type (or drag them into your own order), and export up to 750 images at once.
 
-Pick a whole folder, with an optional subfolder toggle
-Tick or untick images, with a live preview thumbnail for each
-Choose page size (A4, Letter or match-image) or slide size (16:9 or 4:3), plus margins, background, resolution and quality
-Optionally split big sets into several files
-No server, no libraries, no uploads: everything runs locally in your browser, and it works on GitHub Pages as-is
+Browser-only tool: pick a folder of images, tick/sort them, export one PDF or PPTX (max 750 images). No uploads, no dependencies.
+
+## Publish on GitHub Pages
+1. Create a repository and upload `index.html` (and this README) to the root.
+2. Repo **Settings → Pages → Build and deployment**: Source = *Deploy from a branch*, Branch = `main`, folder = `/ (root)`.
+3. Open `https://<your-username>.github.io/<repo>/`.
+
+## Notes
+- Sort by name, date modified, date taken (JPEG EXIF), size, type, or drag rows for manual order. Browsers do not expose a file's true creation date, so "date modified" is used.
+- Folder picking needs a desktop browser (Chrome, Edge, Firefox, Safari). On phones use "Select individual images".
+- HEIC/TIFF/RAW are not readable by browsers and are skipped.
